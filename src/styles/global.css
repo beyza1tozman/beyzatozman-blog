@@ -1,5 +1,5 @@
 html {
-    background-color: #f1f5f9;
+    background-color: #faeeff;
     font-family: sans-serif;
 }
 
@@ -31,14 +31,14 @@ h1 {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: #f0a2f3;
 }
 
 .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
+    background-color: #f0a2f3;
     display: none;
     margin: 0;
 }
@@ -51,11 +51,16 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: #412968;
+}
+
+.nav-links a:active {
+    color: #ade2ec;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #ff9776;
+    background-color: #f0a2f3;
 }
 
 .expanded {
