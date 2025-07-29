@@ -1,5 +1,22 @@
 ---
-const { url, title } = Astro.props;
+const { url, title, pubDate } = Astro.props;
 ---
 
-<li><a href={url}>{title}</a></li>
+<div class="blogPost">
+    <a href={url}>{title}</a>
+    <p>{pubDate}</p>
+</div>
+
+<style>
+.blogPost {
+  padding: 40px 10px;
+  background-color: rgb(218, 157, 204);
+  display: flex;
+  width: 60%;        
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto; 
+  border-radius: 20px;
+}
+
+</style>

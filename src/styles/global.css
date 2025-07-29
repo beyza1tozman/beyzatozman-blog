@@ -1,6 +1,13 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("../../public/fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   background-color: #faeeff;
-  font-family: sans-serif;
+  font-family: "Quicksand";
 }
 
 body {
@@ -8,6 +15,7 @@ body {
   width: 100%;
   max-width: 80ch;
   line-height: 1.5;
+  padding-top: 60px;
 }
 
 * {
@@ -17,10 +25,26 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+  display: block;
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #faeeff;
+}
+
+.nav-container {
+  max-width: 80ch;
+  margin: 0 auto;
   display: flex;
+}
+
+nav.scrolled {
+  background-color: rgba(218, 194, 218, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 /* nav styles */
@@ -29,6 +53,7 @@ nav {
   cursor: pointer;
   display: inline;
   margin-top: 10px;
+  background-color: #a099a0;
 }
 
 .hamburger .line {
@@ -41,11 +66,9 @@ nav {
 
 .nav-links {
   width: 100%;
+  max-width: 50ch;
   top: 5rem;
   left: 48px;
-  background-color: #f0a2f3;
-  display: none;
-  margin: 0;
 }
 
 .nav-links a {
@@ -58,26 +81,25 @@ nav {
   color: #412968;
 }
 
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #f0a2f3;
+}
+
 .nav-links a:active {
   color: #ade2ec;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #f0a2f3;
-}
-
 .expanded {
-  display: block;
+  display: flex;
 }
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
     display: inline-block;
-    position: static;
-    width: auto;
-    background: none;
+    margin-left: 10em;
+    width: 100%;
+    max-width: 80ch;
   }
 
   .nav-links a {
@@ -98,4 +120,13 @@ html.dark {
 
 .dark .nav-links a {
   color: #fff;
+}
+
+.dark nav {
+  background-color: #21212b;
+}
+
+.dark nav.scrolled {
+  background-color: rgba(218, 194, 218, 0.2);
+  backdrop-filter: blur(10px);
 }
