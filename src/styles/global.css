@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Quicksand";
-  src: url("../../public/fonts/Quicksand-Medium.ttf") format("truetype");
+  src: url("../../fonts/Quicksand-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -91,7 +91,7 @@ nav.scrolled {
 }
 
 .expanded {
-  display: flex;
+  display: none;
 }
 
 @media screen and (min-width: 636px) {
@@ -120,6 +120,15 @@ html.dark {
 
 .dark .nav-links a {
   color: #fff;
+}
+
+.dark .nav-links a:hover,
+.dark .nav-links a:focus {
+  color: #f0a2f3;
+}
+
+.dark .nav-links a:active {
+  color: #ade2ec;
 }
 
 .dark nav {

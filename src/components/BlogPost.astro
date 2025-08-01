@@ -3,20 +3,38 @@ const { url, title, pubDate } = Astro.props;
 ---
 
 <div class="blogPost">
-    <a href={url}>{title}</a>
-    <p>{pubDate}</p>
+  <a href={url}>{title}</a>
+  <p>{pubDate}</p>
 </div>
 
 <style>
-.blogPost {
-  padding: 40px 10px;
-  background-color: rgb(218, 157, 204);
-  display: flex;
-  width: 60%;        
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem auto; 
-  border-radius: 20px;
-}
+  .blogPost {
+    padding: 40px 10px;
+    background-color: rgb(218, 157, 204);
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    border-radius: 20px;
+    position: relative;
+  }
 
+  .blogPost a,
+  a:active,
+  a:hover,
+  a:visited,
+  a:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blogPost a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
 </style>
