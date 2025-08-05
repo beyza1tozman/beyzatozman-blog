@@ -8,7 +8,7 @@
   ---
 
   <BaseLayout pageTitle={pageTitle}>
-    <h1>/Posts</h1>
+    
     {
       allPosts
         .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()) // Sort by descending date

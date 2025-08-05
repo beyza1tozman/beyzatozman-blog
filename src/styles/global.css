@@ -34,12 +34,13 @@ nav {
   left: 0;
   right: 0;
   background-color: #faeeff;
+  z-index: 100;
 }
 
 .nav-container {
+  display: flex;
   max-width: 80ch;
   margin: 0 auto;
-  display: flex;
 }
 
 nav.scrolled {
@@ -48,37 +49,40 @@ nav.scrolled {
 }
 
 /* nav styles */
-.hamburger {
-  padding-right: 10px;
-  cursor: pointer;
-  display: inline;
-  margin-top: 10px;
-  background-color: #a099a0;
-}
+@media screen and (max-width: 636px) {
+  .hamburger {
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
 
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #f0a2f3;
-}
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #f0a2f3;
+  }
 
-.nav-links {
-  width: 100%;
-  max-width: 50ch;
-  top: 5rem;
-  left: 48px;
-}
+  .nav-links {
+    width: 100px;
+    position: absolute;
+    top: 5rem;
+    left: 48px;
+    background-color: rgba(102, 97, 102, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
 
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #412968;
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 
 .nav-links a:hover,
@@ -96,15 +100,19 @@ nav.scrolled {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    display: inline-block;
+    display: block;
     margin-left: 10em;
     width: 100%;
     max-width: 80ch;
   }
 
   .nav-links a {
+    position: static;
     display: inline-block;
     padding: 15px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
   .hamburger {
