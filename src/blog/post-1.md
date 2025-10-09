@@ -41,6 +41,6 @@ come.I will finish the Astro tutorial, and then keep adding more posts. Watch th
 
 come.I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
 
-![angelina.](../assets/angelina.png)
+![angelina.](/assets/angelina.png)
 
-![seine_river.](../assets/seine_river.png)
+![seine_river.](/assets/seine_river.png)

@@ -1,13 +1,11 @@
 import { defineConfig } from 'astro/config';
 import icon from "astro-icon";
-import node from "@astrojs/node";
 import react from "@astrojs/react";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://beyzasblog.netlify.app/",
   integrations: [icon(), react()],
-  adapter: node({
-    mode: "standalone"
-  })
+  adapter: netlify(),
 });
