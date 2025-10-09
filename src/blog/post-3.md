@@ -1,11 +1,11 @@
 ---
-title: My Third Blog Post
-author: Astro Learner
+title: "My Third Blog Post"
+pubDate: 2024-08-10
 description: "I had some challenges, but asking in the community really helped!"
+author: "beyza tozman"
 image:
   url: "https://docs.astro.build/assets/rays.webp"
   alt: "The Astro logo on a dark background with rainbow rays."
-pubDate: 2022-07-15
 tags: ["art", "photography"]
 ---
 

@@ -4,9 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const pageTitle = "Tag Index";
 const allPosts = await getCollection("blog");
-const tags = [
-  ...new Set(allPosts.map((post) => post.data.tags).flat()),
-];
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -23,7 +21,7 @@ const tags = [
 
 <style>
   a {
-    color: #00539f;
+    color: #8fc2f1;
   }
 
   .tags {

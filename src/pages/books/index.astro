@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const pageTitle = "Books";
+
+const allBooks = await getCollection("books");
+
+const booksByYear = allBooks.reduce(
+  (acc, book) => {
+    const year = String(book.data.yearRead);
+    acc[year] ??= [];
+    acc[year].push(book);
+    return acc;
+  },
+  {} as Record<string, typeof allBooks>
+);
+
+const sortedYears = Object.keys(booksByYear)
+  .map(Number)
+  .sort((a, b) => b - a);
+---
+
+<BaseLayout pageTitle={pageTitle} class="books">
+  <h1 class="books-title">Books</h1>
+  <div class="books-content">
+    {
+      sortedYears.map((year) => (
+        <div class="year-group">
+          <h2 class="year-header">{year} 📚</h2>
+          <ul>
+            {booksByYear[year].map((book) => (
+              <li>
+                <div class="line-content">
+                  <a class="book-title" href={`/books/${book.id}/`}>
+                    {book.data.title}
+                  </a>
+
+                  <span>by {book.data.author}</span>
+
+                  <span class="rating">
+                    {[...Array(5)].map((_, i) => (
+                      <span
+                        class={`star ${i < book.data.rating ? "filled" : ""}`}
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .books-title {
+    display: block;
+    text-align: center;
+    font-family: "Londrina Outline", system-ui;
+  }
+
+  .year-header {
+    color: white;
+  }
+
+  .books-content {
+    max-width: 120ch;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #4b352a;
+    border: 5px solid #3a2921;
+    border-radius: 10px;
+  }
+
+  .books-content ul {
+    list-style: none;
+  }
+
+  .books-content li {
+    color: #faebd7;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .star {
+    color: #b98d654d;
+  }
+
+  .star.filled {
+    color: #df835f;
+  }
+
+  .book-title {
+    color: #f8c98a;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .book-title:hover {
+    color: #df835f;
+  }
+</style>

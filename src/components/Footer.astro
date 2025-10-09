@@ -2,6 +2,15 @@
 import Social from "./Social.astro";
 ---
 
+<footer>
+  <!-- <div class="social">
+    <Social platform="github" username="beyza1tozman" />
+    <Social platform="instagram" username="loovely.days" />
+  </div> -->
+
+  <h3 class="footer-content">@ 2025 Beyza Tozman</h3>
+</footer>
+
 <style>
   footer {
     display: flex;
@@ -11,15 +20,9 @@ import Social from "./Social.astro";
   }
   .social {
     display: flex;
-  
+  }
+  .footer-content {
+    display: block;
+    text-align: center;
   }
 </style>
-
-<footer>
-  <div class="social">
-    <Social platform="github" username="beyza1tozman" />
-    <Social platform="instagram" username="loovely.days" />
-  </div>
-  
-  <h3>@ 2025 Beyza Tozman</h3>
-</footer>

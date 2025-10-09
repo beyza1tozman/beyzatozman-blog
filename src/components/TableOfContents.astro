@@ -1,0 +1,135 @@
+---
+const { headings } = Astro.props;
+
+const filtered = headings.filter(
+  (h: { depth: number }) => h.depth === 2 || h.depth === 3
+);
+---
+
+<nav class="toc-nav">
+  <h2 class="toc-title">In this post</h2>
+  <ul>
+    {
+      filtered.map((h: { depth: any; slug: any; text: unknown }) => (
+        <li class={`depth-${h.depth}`}>
+          <a href={`#${h.slug}`}>{h.text}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .toc-nav {
+    position: sticky;
+    top: 4rem;
+    padding: 1rem;
+    border-left: 2px solid;
+    font-size: 0.9rem;
+  }
+
+  .toc-title {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .toc-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc-nav li {
+    margin: 0.25rem 0;
+  }
+
+  .toc-nav li.depth-3 {
+    margin-left: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .toc-nav a {
+    color: #303131;
+    text-decoration: none;
+  }
+  .toc-nav a:hover {
+    color: #e7acdf;
+  }
+  .toc-nav a.active {
+    font-weight: bold;
+    color: #f571cd;
+    text-decoration: underline;
+  }
+
+  html.dark .toc-nav a {
+    color: #cedbe7;
+  }
+  html.dark .toc-nav a:hover {
+    color: #ffc7f7;
+  }
+  html.dark .toc-nav a.active {
+    font-weight: bold;
+    color: #f571cd;
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  const links = document.querySelectorAll(".toc-nav a");
+
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href")?.substring(1) ?? "";
+      if (targetId) {
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+
+  const tocLinks = document.querySelectorAll(".toc-nav a");
+  const headings = document.querySelectorAll("h2, h3");
+
+  function setActiveLink(activeId: string) {
+    tocLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${activeId}`) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  function setInitialActive() {
+    if (headings.length > 0) {
+      const firstHeading = headings[0];
+      const firstId = firstHeading.getAttribute("id");
+      if (firstId) {
+        setActiveLink(firstId);
+      }
+    }
+  }
+
+  setInitialActive();
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
+        if (entry.isIntersecting && id) {
+          setActiveLink(id);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "-60px 0px -80% 0px",
+      threshold: 0,
+    }
+  );
+
+  headings.forEach((h) => observer.observe(h));
+</script>

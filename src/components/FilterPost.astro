@@ -1,0 +1,120 @@
+---
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+const url = new URL(Astro.request.url);
+const activeCategory = url.searchParams.get("category");
+
+const { tagColors } = Astro.props;
+---
+
+<div class="filter-div">
+  <h2>Filter Blog Posts by Category</h2>
+  {
+    tags.map((tag) => {
+      const color = tagColors[tag] || tagColors.default;
+      const isActive = tag === activeCategory;
+      return (
+        <button
+          class:list={["tag-button", { active: isActive }]}
+          data-tag={tag}
+          style={`--tag-color: ${color};`}
+        >
+          {tag}
+        </button>
+      );
+    })
+  }
+
+  {
+    activeCategory && (
+      <div class="clearFilter">
+        <button id="clearCategory">Clear Category ✖</button>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .filter-div {
+    background-color: #86c5bd;
+    margin: 0.25em 1.5em;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #53ada1;
+    padding: 0.5em 1em;
+    min-width: 250px;
+    max-width: 300px;
+  }
+
+  .tag-button {
+    margin: 0.25em;
+    border-radius: 0.5em;
+    border: 2px solid var(--tag-color);
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    background-color: #f8fcfd;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .tag-button.active {
+    background-color: var(--tag-color);
+    color: white;
+  }
+
+  .tag-button.active:hover {
+    background-color: var(--tag-color);
+    color: white;
+  }
+
+  .tag-button:not(.active):hover {
+    background-color: var(--tag-color);
+    color: white;
+  }
+
+  .clearFilter {
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  #clearCategory {
+    background: #7a7676;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+
+  #clearCategory:hover {
+    background: #383838;
+  }
+</style>
+
+<script>
+  const tagButtons =
+    document.querySelectorAll<HTMLButtonElement>(".tag-button");
+
+  tagButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const tag = button.dataset.tag;
+      if (!tag) return;
+
+      const url = new URL(window.location.href);
+      url.searchParams.set("category", tag);
+      window.location.href = url.toString();
+    });
+  });
+
+  document.getElementById("clearCategory")?.addEventListener("click", () => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("category");
+    window.location.href = url.toString();
+  });
+</script>

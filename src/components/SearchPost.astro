@@ -1,0 +1,85 @@
+---
+import { Icon } from "astro-icon/components";
+
+const url = new URL(Astro.request.url);
+const activeSearch = url.searchParams.get("search");
+---
+
+<div class="search-div">
+  <h2>Search the Blog</h2>
+  <form id="search-widget">
+    <input
+      type="search"
+      id="search-widget-input"
+      name="search"
+      class="input"
+      maxlength="20"
+      placeholder="Search the blog..."
+      required
+    />
+    <button type="submit" class="btn"><Icon name="mdi:magnify" /></button>
+  </form>
+
+  {
+    activeSearch && (
+      <div class="clearFilter">
+        <button id="clearSearch">Clear Search ✖</button>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .search-div {
+    background-color: #86c5bd;
+    margin: 0.25em 1.5em;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #53ada1;
+    padding: 0.5em 1em;
+    min-width: 250px;
+    max-width: 300px;
+  }
+  .clearFilter {
+    margin-top: 1em;
+    text-align: center;
+  }
+  #clearSearch {
+    background: #7a7676;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+  #clearSearch:hover {
+    background: #383838;
+  }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("#search-widget");
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const searchInput = form.querySelector<HTMLInputElement>('[name="search"]');
+    const searchValue = searchInput?.value.trim() ?? "";
+
+    const url = new URL(window.location.href);
+    if (searchValue) url.searchParams.set("search", searchValue);
+    else url.searchParams.delete("search");
+
+    window.location.href = url.toString();
+  });
+
+  document
+    .querySelector<HTMLButtonElement>("#clearSearch")
+    ?.addEventListener("click", () => {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("search");
+      window.location.href = url.toString();
+    });
+</script>

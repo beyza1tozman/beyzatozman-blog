@@ -1,24 +1,99 @@
-  ---
-  import { getCollection } from "astro:content";
-  import BaseLayout from "../../layouts/BaseLayout.astro";
-  import BlogPost from "../../components/BlogPost.astro";
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import FilterPost from "../../components/FilterPost.astro";
+import SearchPost from "../../components/SearchPost.astro";
+import { tagColors } from "../../scripts/tagColors";
 
-  const allPosts = await getCollection("blog");
-  const pageTitle = "My Astro Learning Blog"; 
-  ---
+const pageTitle = "Posts";
 
-  <BaseLayout pageTitle={pageTitle}>
-    
-    {
-      allPosts
-        .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()) // Sort by descending date
-        .map((post) => (
-          <BlogPost
-            key={post.id}
-            url={`/posts/${post.id}/`}
-            title={post.data.title}
-            pubDate={new Date(post.data.pubDate).toLocaleDateString()}
-          />
-        ))
+export const prerender = false;
+
+const allPosts = await getCollection("blog");
+
+const url = new URL(Astro.request.url);
+const search = url.searchParams.get("search")?.toLowerCase() ?? "";
+const category = url.searchParams.get("category") ?? "";
+
+let filteredPosts = allPosts;
+
+if (search) {
+  filteredPosts = filteredPosts.filter((post) => {
+    const title = post.data.title.toLowerCase();
+    return title.includes(search);
+  });
+}
+
+if (category) {
+  filteredPosts = filteredPosts.filter((post) =>
+    post.data.tags.includes(category)
+  );
+}
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1 class="posts-title">Posts</h1>
+  <div id="parent" class="page-wrapper">
+    <aside id="a"><SearchPost /></aside>
+    <section id="b">
+      {
+        filteredPosts
+          .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+          .map((post) => (
+            <BlogPost
+              key={post.id}
+              url={`/posts/${post.id}/`}
+              title={post.data.title}
+              pubDate={post.data.pubDate}
+            />
+          ))
+      }
+    </section>
+    <aside id="c"><FilterPost {tagColors} /></aside>
+  </div>
+</BaseLayout>
+
+<style>
+  .posts-title {
+    display: block;
+    text-align: center;
+    font-family: "Londrina Outline", system-ui;
+  }
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    justify-content: center;
+
+    #a {
+      display: flex;
+      justify-content: center;
     }
-  </BaseLayout>
+
+    #c {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    #parent {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #a {
+      order: 1;
+    }
+    #b {
+      order: 3;
+    }
+    #b {
+      order: 2;
+    }
+  }
+</style>

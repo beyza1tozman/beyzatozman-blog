@@ -19,14 +19,16 @@
 
 <style>
   #themeToggle {
-    border: 0;
+    border-color: transparent;
+    border-radius: 20px;
     background: none;
     display: inline;
+    margin: 5px;
+    cursor: pointer;
   }
 
   #themeToggle:hover {
     background-color: rgb(227, 189, 236);
-
   }
   .sun {
     fill: black;
@@ -40,6 +42,10 @@
   }
   :global(.dark) .moon {
     fill: white;
+  }
+
+  :global(.books) #themeToggle:hover {
+    background-color: #b17f59;
   }
 </style>
 

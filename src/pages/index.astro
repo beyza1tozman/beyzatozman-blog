@@ -4,6 +4,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home Page";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} class="home">
+  <div class="sketch">
+    <iframe
+      id="p5-sketch-iframe"
+      src="/sketch/index.html"
+      width="400"
+      height="400"
+      loading="lazy"
+    >
+    </iframe>
+  </div>
+
   <h1>/Hi! I am Beyza</h1>
 </BaseLayout>
+
+<style>
+  .sketch {
+    display: block;
+    text-align: center;
+  }
+
+  .home {
+    max-width: 80ch;
+  }
+
+  iframe {
+    border: none;
+    overflow: hidden;
+  }
+</style>

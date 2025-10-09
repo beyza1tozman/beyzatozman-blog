@@ -1,12 +1,15 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import PageWrapper from "../components/PageWrapper.jsx";
 import "../styles/global.css";
+import "@fontsource-variable/quicksand";
+import "@fontsource/londrina-outline";
 
-const { pageTitle } = Astro.props;
+const { pageTitle, ...props } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class={props.class || ""}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -14,9 +17,13 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body {...props}>
     <Header />
-    <slot />
+    <main>
+      <PageWrapper currentPath={Astro.url.pathname} client:load>
+        <slot />
+      </PageWrapper>
+    </main>
     <Footer />
     <script>
       import "../scripts/menu.js";
