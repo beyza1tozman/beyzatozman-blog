@@ -22,42 +22,52 @@ const sortedYears = Object.keys(booksByYear)
 ---
 
 <BaseLayout pageTitle={pageTitle} class="books">
-  <h1 class="books-title">Books</h1>
-  <div class="books-content">
-    {
-      sortedYears.map((year) => (
-        <div class="year-group">
-          <h2 class="year-header">{year} 📚</h2>
-          <ul>
-            {booksByYear[year].map((book) => (
-              <li>
-                <div class="line-content">
-                  <a class="book-title" href={`/books/${book.id}/`}>
-                    {book.data.title}
-                  </a>
+  <div class="books-container">
+    <h1 class="books-title">Books</h1>
+    <div class="books-content">
+      {
+        sortedYears.map((year) => (
+          <div class="year-group">
+            <h2 class="year-header">{year} 📚</h2>
+            <ul>
+              {booksByYear[year]
+                .sort(
+                  (a, b) =>
+                    b.data.fullDate.getTime() - a.data.fullDate.getTime()
+                )
+                .map((book) => (
+                  <li>
+                    <div class="line-content">
+                      <a class="book-title" href={`/books/${book.id}/`}>
+                        {book.data.title}
+                      </a>
 
-                  <span>by {book.data.author}</span>
+                      <span>by {book.data.author}</span>
 
-                  <span class="rating">
-                    {[...Array(5)].map((_, i) => (
-                      <span
-                        class={`star ${i < book.data.rating ? "filled" : ""}`}
-                      >
-                        ★
+                      <span class="rating">
+                        {[...Array(5)].map((_, i) => (
+                          <span
+                            class={`star ${i < Math.floor(book.data.rating) ? "filled" : i < book.data.rating ? "half" : ""}`}
+                          >
+                            ★
+                          </span>
+                        ))}
                       </span>
-                    ))}
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))
-    }
+                    </div>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </BaseLayout>
 
 <style>
+  .books-container {
+    margin: 0 2rem;
+  }
   .books-title {
     display: block;
     text-align: center;
@@ -88,11 +98,24 @@ const sortedYears = Object.keys(booksByYear)
   }
 
   .star {
-    color: #b98d654d;
+    color: transparent;
+    background: #b98d654d;
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   .star.filled {
-    color: #df835f;
+    background: #df835f;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .star.half::before {
+    content: "★";
+    background: linear-gradient(to right, #df835f 50%, #b98d654d 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .book-title {

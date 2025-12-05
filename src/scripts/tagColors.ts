@@ -1,6 +1,6 @@
 export const tagColors: Record<string, string> = {
   code: "#9929EA",
-  travel: "#FFE79B",
+  travel: "#fcce6aff",
   books: "#B17F59",
   art: "#D76C82",
   photography: "#007074",

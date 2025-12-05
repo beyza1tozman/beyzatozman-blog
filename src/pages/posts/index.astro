@@ -4,7 +4,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import FilterPost from "../../components/FilterPost.astro";
 import SearchPost from "../../components/SearchPost.astro";
-import { tagColors } from "../../scripts/tagColors";
 
 const pageTitle = "Posts";
 
@@ -50,7 +49,7 @@ if (category) {
           ))
       }
     </section>
-    <aside id="c"><FilterPost {tagColors} /></aside>
+    <aside id="c"><FilterPost /></aside>
   </div>
 </BaseLayout>
 
@@ -79,7 +78,7 @@ if (category) {
     }
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1060px) {
     #parent {
       display: flex;
       flex-flow: column;

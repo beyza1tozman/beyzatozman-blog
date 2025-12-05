@@ -1,15 +1,24 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import TableOfContents from "../components/TableOfContents.astro";
+import { tagColors } from "../scripts/tagColors";
 
-const { frontmatter, headings, tagColors } = Astro.props;
+const { frontmatter, headings } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title} class="post" {tagColors}>
   <div class="page-wrapper">
     <section class="content">
       <h1>{frontmatter.title}</h1>
-      <p>Published on: {frontmatter.pubDate.toLocaleDateString()}</p>
+      <p>
+        Published on: {
+          frontmatter.pubDate.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }
+      </p>
       <div class="tags">
         {
           frontmatter.tags.map((tag: string) => {

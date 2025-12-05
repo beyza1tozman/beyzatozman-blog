@@ -25,7 +25,7 @@ const books = defineCollection({
     author: z.string(),
     rating: z.number().min(1).max(5),
     yearRead: z.number(),
-    fullDate: z.date().optional(),
+    fullDate: z.date(),
     genre: z.string().optional(),
     pages: z.number().optional(),
   }),

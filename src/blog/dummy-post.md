@@ -1,6 +1,6 @@
 ---
 title: "My First Blog Post"
-pubDate: 2024-03-15
+pubDate: 2025-12-01
 description: "This is the first post of my new Astro blog."
 author: "beyza tozman"
 image:
@@ -9,7 +9,7 @@ image:
 tags: ["code", "travel", "books"]
 ---
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+This is a dummy post.
 
 ## What I've accomplished
 

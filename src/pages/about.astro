@@ -1,13 +1,206 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 const pageTitle = "About Me";
 ---
 
-<BaseLayout pageTitle={pageTitle} class="about" />
+<BaseLayout pageTitle={pageTitle} class="about">
+  <div id="gacha-container">
+    <img id="gacha-machine-1" src="/assets/gatchapon.png" class="active" />
+    <img
+      id="gacha-machine-2"
+      src="/assets/gatchapon_withball.png"
+      class="hidden"
+    />
+
+    <div id="gacha-ball-stage" class="hidden">
+      <img id="gacha-ball" src="/assets/ball.png" />
+    </div>
+  </div>
+
+  <div id="fact-popup" class="hidden">
+    <div id="fact-content">
+      <button id="close-btn">✗</button>
+      <div id="fact-text"></div>
+    </div>
+  </div>
+</BaseLayout>
 
 <style>
   .about {
-    max-width: 80ch;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #gacha-container {
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 60%;
+    min-width: 400px;
+    aspect-ratio: 1;
+  }
+
+  #gacha-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .shake {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  @keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  #gacha-ball-stage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    width: 90%;
+    max-width: 250px;
+    aspect-ratio: 1;
+  }
+
+  #gacha-ball {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  #fact-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #fact-popup:not(.hidden) {
+    display: flex;
+  }
+
+  #fact-content {
+    position: relative;
+    background-color: #d08ee0;
+    border: 2px solid #af64c2;
+    border-radius: 12px;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    width: 80vw;
+    max-width: 700px;
+    min-width: 320px;
+    max-height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+
+  #close-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 8px;
+    right: 12px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background: none;
+  }
+
+  #close-btn:hover {
+    color: #357959;
+  }
+
+  @media (max-width: 480px) {
+    #fact-content {
+      padding: 20px;
+    }
   }
 </style>
+
+<script>
+  const facts = [
+    'I love Studio Ghibli movies and my favorite is "Castle in the Sky"!',
+    'I love reading. I can recommend any Agatha Christie book for detective story lovers. My favorite is "And Then There Were None".',
+    "I drew this gatchapon in Krita. I initially wanted to build a 3D model for it but later on decided on a 2D version.",
+    'This machine is called a Gatchapon. They are Japanese vending machines that contain a wide variety of small trinkets and toys. Its name comes from "gacha" which is the sound of the crank and "pon" which is the sound of the capsule dropping.',
+    "I have a twin brother who is also a software engineer!",
+    "I have a cute, wrinkly Sphynx cat named Hero!",
+  ];
+
+  const machine1 = document.getElementById("gacha-machine-1");
+  const machine2 = document.getElementById("gacha-machine-2");
+  const ballStage = document.getElementById("gacha-ball-stage");
+  const gachaBall = document.getElementById("gacha-ball");
+  const factPopup = document.getElementById("fact-popup");
+  const factText = document.getElementById("fact-text");
+  const closeBtn = document.getElementById("close-btn");
+
+  machine1?.addEventListener("click", () => {
+    machine1.classList.add("shake");
+
+    setTimeout(() => {
+      machine1.classList.remove("shake");
+      machine1.classList.replace("active", "hidden");
+      machine2!.classList.replace("hidden", "active");
+
+      setTimeout(() => {
+        machine2!.classList.replace("active", "hidden");
+        ballStage!.classList.remove("hidden");
+      }, 800);
+    }, 800);
+  });
+
+  gachaBall?.addEventListener("click", () => {
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+    factText!.textContent = fact;
+
+    ballStage!.classList.add("hidden");
+    factPopup!.classList.remove("hidden");
+  });
+
+  closeBtn?.addEventListener("click", () => {
+    factPopup!.classList.add("hidden");
+    machine1!.classList.replace("hidden", "active");
+  });
+</script>

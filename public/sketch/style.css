@@ -2,9 +2,10 @@ html,
 body {
     margin: 0;
     padding: 0;
-    cursor: url("../star.png") 0 0, auto;
+    cursor: url("/star.svg") 0 0, auto;
 }
 
 canvas {
     display: block;
+
 }

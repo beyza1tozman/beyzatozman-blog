@@ -1,7 +1,7 @@
 ---
 title: "Madonna in a fur coat"
 author: "Sabahattin Ali"
-rating: 4
+rating: 5
 yearRead: 2025
 fullDate: 2025-01-15
 genre: "Literary Fiction"
