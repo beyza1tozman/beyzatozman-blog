@@ -68,6 +68,7 @@ const sortedYears = Object.keys(booksByYear)
   .books-container {
     margin: 0 2rem;
   }
+
   .books-title {
     display: block;
     text-align: center;
@@ -94,28 +95,42 @@ const sortedYears = Object.keys(booksByYear)
   .books-content li {
     color: #faebd7;
     font-size: 1.2rem;
-    margin: 1.5rem 0;
+    margin: 0.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #6b4f3f;
+  }
+
+  .books-content li:last-child {
+    border-bottom: none;
+  }
+
+  .rating {
+    display: inline-flex;
+    gap: 1px;
   }
 
   .star {
-    color: transparent;
-    background: #b98d654d;
-    -webkit-background-clip: text;
-    background-clip: text;
+    position: relative;
+    font-size: 20px;
+    color: #b98d654d;
   }
 
   .star.filled {
-    background: #df835f;
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: #df835f;
+  }
+
+  .star.half {
+    color: #b98d654d;
   }
 
   .star.half::before {
     content: "★";
-    background: linear-gradient(to right, #df835f 50%, #b98d654d 50%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #df835f;
   }
 
   .book-title {
@@ -126,5 +141,13 @@ const sortedYears = Object.keys(booksByYear)
 
   .book-title:hover {
     color: #df835f;
+  }
+
+  @media screen and (max-width: 800px) {
+    .line-content {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
   }
 </style>

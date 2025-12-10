@@ -1,7 +1,7 @@
 ---
 title: "Project Hail Mary"
 author: "Andy Weir"
-rating: 4
+rating: 4.5
 yearRead: 2025
 fullDate: 2025-02-10
 genre: "Science Fiction"

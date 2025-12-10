@@ -1,9 +1,9 @@
 ---
 title: "Going Solo"
-author: "Blake Crouch"
+author: "Roald Dahl"
 rating: 4.5
 yearRead: 2025
-fullDate: 2025-12-05
+fullDate: 2025-12-07
 genre: "Autobiography"
 pages: 208
 ---
