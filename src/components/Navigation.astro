@@ -1,16 +1,10 @@
 ---
-
+const path = Astro.url.pathname.replace(/\/$/, "");
 ---
 
 <div class="nav-links">
-  <a href="/" class={Astro.url.pathname === "/" ? "active" : ""}>/Home</a>
-  <a href="/about" class={Astro.url.pathname === "/about" ? "active" : ""}
-    >/About</a
-  >
-  <a href="/posts" class={Astro.url.pathname === "/posts" ? "active" : ""}
-    >/Posts</a
-  >
-  <a href="/books" class={Astro.url.pathname === "/books" ? "active" : ""}
-    >/Books</a
-  >
+  <a href="/" class={path === "" ? "active" : ""}>/Home</a>
+  <a href="/about" class={path === "/about" ? "active" : ""}>/About</a>
+  <a href="/posts" class={path === "/posts" ? "active" : ""}>/Posts</a>
+  <a href="/books" class={path === "/books" ? "active" : ""}>/Books</a>
 </div>

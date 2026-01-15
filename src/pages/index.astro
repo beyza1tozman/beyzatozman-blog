@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Social from "../components/Social.astro";
 
@@ -6,21 +7,20 @@ const likes = [
   "smell of rain",
   "coffee",
   "desserts",
-  "cats & other animals",
   "ramen, sushi, sarma, food in general",
   "fall & spring",
   "purple & green",
   "anime",
+  "cats & other animals",
   "photography",
-  "warm lighting",
   "fashion",
-  "anything cute",
+  "warm lighting",
 ];
 
-const pageTitle = "Beyza's Blog";
+const pageTitle = "Beyza";
 ---
 
-<BaseLayout pageTitle={pageTitle} class="home">
+<BaseLayout pageTitle={pageTitle}>
   <div class="home-content">
     <div class="sketch">
       <iframe
@@ -38,9 +38,8 @@ const pageTitle = "Beyza's Blog";
       <img src="/assets/beyza1.png" />
       <div class="paragraph">
         <p>
-          I'm a software developer living in Ankara, Turkey. I really love
-          reading other people's blogs, and they inspired me to build my own
-          digital space.
+          I'm a software developer living in Ankara, Turkey. I love reading
+          other people's blogs, and they inspired me to build my own.
         </p>
         <p>
           I plan on sharing my learnings and anything that interests me. Hope
@@ -60,7 +59,8 @@ const pageTitle = "Beyza's Blog";
       {
         likes.map((item) => (
           <p>
-            <span class="heart-bullet">𖹭</span> {item}
+            <Icon name="mdi:heart-outline" class="heart-bullet" />
+            {item}
           </p>
         ))
       }
@@ -88,26 +88,23 @@ const pageTitle = "Beyza's Blog";
 </BaseLayout>
 
 <style>
-  .home {
-    max-width: 80ch;
-  }
-
   .home-content {
-    margin: 0 2rem;
+    max-width: 80ch;
+    margin: 1rem auto;
   }
 
   .sketch {
     display: block;
+    margin-top: 1.5rem;
     text-align: center;
+    user-select: none;
   }
 
   iframe {
     border: none;
-    overflow: hidden;
     width: min(400px, 100%);
     height: auto;
     aspect-ratio: 1 / 1;
-    overflow: hidden;
   }
 
   .intro {
@@ -126,21 +123,6 @@ const pageTitle = "Beyza's Blog";
 
   .paragraph {
     flex: 1;
-  }
-
-  @media screen and (max-width: 500px) {
-    .intro {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .intro img {
-      margin: 0 auto;
-    }
-
-    .paragraph {
-      text-align: center;
-    }
   }
 
   .section-header {
@@ -175,5 +157,24 @@ const pageTitle = "Beyza's Blog";
     text-decoration: none;
     font-weight: bold;
     color: #60a153;
+  }
+
+  @media screen and (max-width: 900px) {
+    .intro {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .intro img {
+      margin: 0 auto;
+    }
+
+    .paragraph {
+      text-align: center;
+    }
+
+    .home-content {
+      margin: 0 1rem;
+    }
   }
 </style>

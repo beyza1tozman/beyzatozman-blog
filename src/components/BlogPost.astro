@@ -17,17 +17,22 @@ const formattedDate = pubDate.toLocaleDateString("en-US", {
   .blogPost {
     padding: 40px 10px;
     background-color: #d08ee0;
-    width: 80%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem auto;
-    border-radius: 20px;
+    margin: 1rem 1.5em;
+    border-radius: 0.5em;
     border: 3px solid #af64c2;
     position: relative;
     transition: transform 0.2 ease;
-    min-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+  .blogPost:first-child {
+    margin-top: 0;
   }
 
   .blogPost a {
@@ -51,5 +56,14 @@ const formattedDate = pubDate.toLocaleDateString("en-US", {
 
   .blogPost:hover {
     transform: translate(2px, -2px);
+  }
+
+  @media screen and (max-width: 1060px) {
+    .blogPost:first-child {
+      margin-top: 1rem;
+    }
+    .blogPost {
+      width: 300px;
+    }
   }
 </style>

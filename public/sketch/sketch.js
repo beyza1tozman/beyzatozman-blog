@@ -6,7 +6,7 @@ let x_off = 0,
 let colors = [];
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(400, 400);
     angleMode(DEGREES);
 
     let baseSize = min(windowWidth, windowHeight);

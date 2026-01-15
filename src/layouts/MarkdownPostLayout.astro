@@ -6,12 +6,12 @@ import { tagColors } from "../scripts/tagColors";
 const { frontmatter, headings } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title} class="post" {tagColors}>
+<BaseLayout pageTitle={frontmatter.title}>
   <div class="page-wrapper">
     <section class="content">
       <h1>{frontmatter.title}</h1>
       <p>
-        Published on: {
+        {
           frontmatter.pubDate.toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -48,8 +48,20 @@ const { frontmatter, headings } = Astro.props;
 <style>
   .page-wrapper {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr minmax(0, 80ch) 250px;
     gap: 2rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  .content {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .toc {
+    grid-column: 3;
+    width: 250px;
   }
 
   .tags {
@@ -88,21 +100,21 @@ const { frontmatter, headings } = Astro.props;
   }
 
   :global(.markdown img) {
-    width: 100%;
-    height: 350px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 900px) {
     .toc {
       display: none;
     }
 
     .page-wrapper {
-      grid-template-columns: 1fr;
-      margin: 0 1rem;
+      display: flex;
     }
   }
 </style>

@@ -27,15 +27,17 @@ const { posts } = Astro.props;
 
 <BaseLayout pageTitle={tag}>
   <p class="tagged-posts-title">Posts tagged with "{tag}".</p>
-  {
-    posts.map((post) => (
-      <BlogPost
-        url={`/posts/${post.id}`}
-        title={post.data.title}
-        pubDate={post.data.pubDate}
-      />
-    ))
-  }
+  <div class="container">
+    {
+      posts.map((post) => (
+        <BlogPost
+          url={`/posts/${post.id}`}
+          title={post.data.title}
+          pubDate={post.data.pubDate}
+        />
+      ))
+    }
+  </div>
 </BaseLayout>
 
 <style>
@@ -43,5 +45,14 @@ const { posts } = Astro.props;
     display: block;
     text-align: center;
     font-size: 3rem;
+  }
+
+  .container {
+    max-width: 80ch;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 </style>

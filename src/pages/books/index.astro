@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import StarRating from "../../components/StarRating.astro";
 import { getCollection } from "astro:content";
 
 const pageTitle = "Books";
@@ -44,15 +45,7 @@ const sortedYears = Object.keys(booksByYear)
 
                       <span>by {book.data.author}</span>
 
-                      <span class="rating">
-                        {[...Array(5)].map((_, i) => (
-                          <span
-                            class={`star ${i < Math.floor(book.data.rating) ? "filled" : i < book.data.rating ? "half" : ""}`}
-                          >
-                            ★
-                          </span>
-                        ))}
-                      </span>
+                      <StarRating rating={book.data.rating} />
                     </div>
                   </li>
                 ))}
@@ -66,7 +59,8 @@ const sortedYears = Object.keys(booksByYear)
 
 <style>
   .books-container {
-    margin: 0 2rem;
+    max-width: 80ch;
+    margin: 1rem auto;
   }
 
   .books-title {
@@ -80,7 +74,6 @@ const sortedYears = Object.keys(booksByYear)
   }
 
   .books-content {
-    max-width: 120ch;
     margin: 0 auto;
     padding: 2rem;
     background-color: #4b352a;
@@ -104,35 +97,6 @@ const sortedYears = Object.keys(booksByYear)
     border-bottom: none;
   }
 
-  .rating {
-    display: inline-flex;
-    gap: 1px;
-  }
-
-  .star {
-    position: relative;
-    font-size: 20px;
-    color: #b98d654d;
-  }
-
-  .star.filled {
-    color: #df835f;
-  }
-
-  .star.half {
-    color: #b98d654d;
-  }
-
-  .star.half::before {
-    content: "★";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    overflow: hidden;
-    color: #df835f;
-  }
-
   .book-title {
     color: #f8c98a;
     font-weight: bold;
@@ -143,7 +107,7 @@ const sortedYears = Object.keys(booksByYear)
     color: #df835f;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     .line-content {
       display: flex;
       flex-direction: column;

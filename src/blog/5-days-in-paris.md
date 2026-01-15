@@ -1,0 +1,150 @@
+---
+title: "5 Days in Paris"
+pubDate: 2026-01-03
+description: "paris trip"
+author: "beyza tozman"
+tags: ["travel"]
+---
+
+## Intro
+
+This was a very unexpected trip.
+
+One day, while we were talking about places we wanted to travel to in the future with my friend, Paris came up. As we started talking about the details of this yet non-existent trip, like where to go, how it would go, and when it might possibly happen, we thought, why not in the near future? It occured to us that if we talked with our parents and planned properly, we might actually go this year. And since she had gone on a Europe trip not a long while ago, I was more hopeful about my parents giving permission to go with her. And they did! And I was to go on my first abroad trip without my family.
+
+Then the preparations began. First off was buying plane tickets and booking accomodation. We thought of going in spring for a few days, and since it was still months away, we managed to get both the tickets and the reservation quite affordably. We also had plenty of time to plan our days, researching places; making museum reservations, and buying tickets for Paris Disneyland.
+
+It was a fun process and also exciting to wait. At the same time, I was a little anxious about any possible mishap, since I had previously experienced missing a flight. I just wanted the time of the flight to come as soon as possible, get on the plane, and arrive safely.
+
+A few weeks before the trip, I experienced something interesting. A fun encounter. I was looking at novels in my university library, and since I like old hard cover books, I picked up a blue, old hard cover book with interest. It's title was '5 days in Paris'. And since I was about to stay five days in Paris myself, I got fond of the title and of the nice surprise, and borrowed the book.
+
+![book.](/assets/5_days_in_paris/book.png)
+
+## Day 1
+
+Paris welcomed us with a gloomy weather. We were very excited when we landed and wanted to get to our hotel as soon as possible. Then do the things we had planned for day 1. Which were seeing the Arc de Triomphe and Eiffel Tower.
+
+We had a hard time understanding which transportation we needed to use to get to our hotel and what transportation card we needed to get. No one was speaking english in the airport, and a few times we went back and forth between places they directed us to, strolling around in the airport. The communication issues went on the whole duration of our trip and were the biggest problem, but we managed well after getting our metro tickets and were able to go anywhere without asking anyone, also by using Google Translate a few times. After finally getting a weekly metro ticket, we headed to our hotel. It was a little far from the city center, but it was a fair trade-off for the price. We put our stuff down, rested a bit, then went out again to officialy start our first day.
+
+The Arc de Triomphe was our first stop. When we reached there, it was raining a little.
+
+![arc_de_triomphe.](/assets/5_days_in_paris/arc_de_triomphe.png)
+
+Then we walked to Eiffel Tower. Seeing it was beautiful. It was much taller than I expected. I had often heard people say they weren't too impressed by the Eiffel tower, saying that it's just a tall metal tower, but I thought it was very nice to see in person.
+
+As we walked near the tower, the rain got heavier and we got cold and wet.
+
+We searched for a cafe or a restaurant where we could both escape the rain and eat something. We entered the first restaurant near us and shared an onion soup. This was at the top of the list of French food I wanted to try. Although I don't like onion that much, I liked this soup; it was very comforting on a rainy Paris day.
+
+![onion.](/assets/5_days_in_paris/onion.png)
+
+And even though we had more plans for that day, we decided to keep day 1 short and return to our hotel.
+
+While walking to the metro, we noticed that many cafes were already closed, and learned that cafes in Paris close quite early. We saw one that wasn't closed yet and bought a few desserts to try in our hotel room before sleeping.
+
+We didn't like them much, but still, they were a sweet ending to our first day in Paris.
+
+## Day 2
+
+This was the day we were going to Disneyland, and because Paris Disneyland is almost outside of Paris, we woke up early to be there by opening time.
+
+After just one day of travel, I was already really tired. My feet were hurting badly, and it was totally on me. The shoes I wore all day yesterday were ones I hadn't tested for more than 2 hours outside before, and they turned out to be uncomfortable for long days. Luckily, I had packed another pair: long boots that were comfortable enough and suitable for the rainy weather. I also got a little sick, and my voice was kind of hoarse. It stayed that way for the following week, making it hard for me to talk.
+
+We arrived at Disneyland on time, even a bit early, and started waiting in a long line. When we were finally let inside, we strolled around the cute Disney themed shops a bit, then tried to decide on our first ride. We hadn't paid for the fast-pass option to bypass the lines, so we had to wait at least 20 minutes for all of them. But since we stayed there all day, we managed to both walk around and also get to experience 5 rides.
+
+At the end of the day, there was a big event. First, a drone show that lasted quite a while, and when it ended, I thought that was it for the day. But then an even longer fireworks show happened. The whole show was a choreography featuring characters from different Disney movies. My friend and I even got a little emotional during the Tangled part since it is one of our favorite Disney movies.
+
+While we were watching the fireworks, a kind French girl tapped me on the shoulder and showed me her phone, on which she'd typed something in French and showed me the translation: "Your bag is open. Keep it on your front". I had already heard this advice many times before and was trying to be careful, so I thanked her and closed my purse.
+
+It was a very fun day, and I was happy to cross something off my bucket list.
+
+![disney.](/assets/5_days_in_paris/disney.png)
+
+## Day 3
+
+This day was for museums and parks.
+
+We started the day at the Place de la Concorde. We saw the Fontaine des Mers and then walked to the famous park right next to it, Jardin des Tuileries. It was beautiful. I learned that the Palace of Tuileries was burned in 1871, so sadly there is no palace to enter, only the garden, and it is free to enter all year.
+
+Then we went to Musée de l'Orangerie. It was the first of the 3 museums we had booked months before for this day. I loved seeing all the artworks, especially Monet's, since he is one of my favorite painters. The museum also had a shop inside that sold souvenirs related to the art in the museum, and we got a few things.
+
+![l'Orangerie.](/assets/5_days_in_paris/l'Orangerie.png)
+
+After seeing Musée de l'Orangerie, we went to the Musée du Louvre. We spent nearly 3 hours in the Louvre and I became very tired. And I think you need a whole day to be able to see all of the Louvre properly. It was very big and you have to stop in every corner to admire all the pieces. We also had one more museum we reserved for that day at 4, so we went out.
+
+Final museum of the day was Dior museum. It was not within walking distance, and we had to take the metro. and I became a little stressed about not arriving on time and not being let inside. So we rushed a little and arrived around 4:15. We waited in line for a short while then thankfully entered without any problem. There were many beautiful designs and dresses, and they were projecting different visuals onto the walls in one room, which was really beautiful.
+![dior.](/assets/5_days_in_paris/dior.png)
+
+After that, we were very hungry, so we went to a cafe nearby that we had saved. I had chicken and potatoes, and it was very good.
+
+Later, we went back to the Louvre to take pictures from the outside. We took photos just before they closed the area.
+
+![louvre.](/assets/5_days_in_paris/louvre.png)
+
+We bought macarons from Ladurée and started walking to Notre-Dame Cathedral. The way there was a beautiful 20 minute walk alongside the Seine River. When we arrived, there were people making music, and we sat in the area and ate our macarons. With the sun just set, the deep blue sky and Notre-Dame in front of us created a very beautiful scene. And the macarons were the best I have ever had.
+
+![notredame.](/assets/5_days_in_paris/notredame.png)
+
+I was very, very tired at this moment and wanted to go back to our hotel, but we also wanted to see the Eiffel Tower sparkling in the evening. We heard that it happens for 5 minutes on the hour from dusk until 12 am. We asked a few people there to confirm, then decided to go there, hoping we would see it on 9 pm.
+
+Eiffel was a few stops away. And when we reached, there was still some time left until 9 pm. There were many people selling tiny Eiffel Tower ornaments and keychains. We walked around and tried to find a nice spot that wasn't too crowded.
+
+The sparkling Eiffel was very beautiful and a great way to end the day.
+
+![eiffel.](/assets/5_days_in_paris/eiffel.png)
+
+## Day 4
+
+Today was going to be our kind of solo travel day. We had talked the day before and decided that on our full final day in Paris, after visiting the Palace of Versailles together, we would spend the rest of the day on our own. She wanted to go to more than one museum, and I wanted to have a more relaxed and spontaneous day.
+
+We went to Versailles Palace and it was very vast and luxurious. It also had a garden, but entering it required and extra ticket, so I decided not to enter and go on with the other things I had planned for the day. And my solo travel started.
+
+I wanted to go to Musée d'Orsay, then to the Luxembourg Garden, and then to decide what to do next.
+
+The Musée d’Orsay was very fun as well.
+
+![orsay.](/assets/5_days_in_paris/orsay.png)
+
+Then I went to Luxembourg Garden. And I had a nicer experience there then at Tuileries garden because I got to sit and relax more in its benches and got to take it all in. And while I was there, looking for what I might do next today from my phone, I saw Shakespear and Company bookshop recommendation. And I remembered hearing of it before and decided it would be really nice to visit. It was within walking distance as well, so I would take my time to walk there and explore along the way.
+
+And I realized that I really like traveling this way. Without following the plans too strictly and just walking along the streets and checking what intrugies you. I experienced 2 lovely things, experiences I wouldn't had if I just followed my plans.
+
+First off, I saw another really cute bookshop and strolled inside. They were selling Studio Ghibli merch as well. And as a Ghibli lover that don't encounter this a lot in my home country I got happy and also bought a kiki chopstick.
+
+Then I walked through a festive street that had many sellers selling sweets. I bought a Belgium waffle, which i really wanted to try. And sat in a nice little park nearby to eat it.
+
+After about 10 more minutes of walking, I reached shakespeare and Company. There was a small line, and it had started to drizzle. The shop was very small, with a cozy atmosphere, and I loved it. I bought a small children's book as a souvenir, which they put their stamp on.
+
+![shakespear.](/assets/5_days_in_paris/shakespear.png)
+
+I thought of going to Angelina as well after the bookshop to try their famous hot chocolate. But since I took a little too much time in the bookshop I had to rush to reach there, scared that they might close. I arrived just in time. There was a small line, and after I started to wait with them, someone working from inside came out and said that we are the last ones they would accept for that day and that we couldn't order food from that moment. I was fine with it since the thing I wanted to try was their hot chocolate.
+
+![angelina.](/assets/5_days_in_paris/angelina.png)
+
+When I finally entered, I got seated at a beautiful table. The interior was really beautiful. After they served my hot chocolate, the waiter also gifted me a little chocolate. I liked the hot chocolate, but even with the creamer it felt too sweet to me, and I think it would have been lot better if I had it with something else to balance the sweetness.
+
+I got out at the time they closed the cafe, and it was raining harder than before. I tried to walk to the metro, then when I found an open cafe, I decided to wait there for a bit until the rain calmed down a little and decide what to do next.
+
+I had 2 options: either I go back to the hotel and call it a day since it was alrady late, like past 8pm, or to go to a Seine River boat cruise. I was feeling a little dizzy, so I was highly considering just going to the hotel, but after resting there for a bit and talking about the the different tour boat options with the owner, which was the longest i spoke with someone in there in English, and as my dizziness had faded, I decided I wanted to go for the boat ride.
+
+I went and bought tickets for I think was the last ride for the day. It was for 9:30 pm. And while I was waiting alongside the boat for the ride to start, under the Eiffel Tower, the tower started to sparkle. Like yesterday just at 9 pm. And because I wasn't waiting for it I got really surprised. It was still slightly raining, and seeing it sparkle under the rain felt beautiful in a different kind of way. And I was happy to see it one more time. Then the boat ride started, and it was very fun. They played many French songs, and it felt like the perfect way to end the trip.
+
+While I was walking to the bus stop to back to our hotel at around 11 pm, I saw that my friend was waiting there as well. After spending the day ourselved meeting at the end like that was very surprising.
+
+## Day 5
+
+The day of our return.
+
+We woke up early, finished packing our things, and checked out of our hotel.
+
+We arrived at the airport early and waited for few hours. The flight went very smoothly. I was in the window seat this time, which was nice. And I looked through the photos I took, listened to music, and slept for a while during it.
+
+![plane.](/assets/5_days_in_paris/plane.png)
+
+We arrived in Istanbul, then went to the train station. Here we were going to part ways with my friend. She was going to Konya and me to Ankara. We said our goodbyes and I got into my train and travelled for like 6 hours. I tried to sleep which was much needed since I was very tired. But I was also scared of oversleeping and missing my stop, so I couldnt sleep well.
+
+Eventually, I arrived, and my family was there to meet me.
+
+These were the longest and one of the most memorable 5 days I have ever had, and I was really happy that I got to experience this.
+
+![ratatouille.](/assets/5_days_in_paris/ratatouille.png)

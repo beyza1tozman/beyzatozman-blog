@@ -33,7 +33,7 @@ if (category) {
 
 <BaseLayout pageTitle={pageTitle}>
   <h1 class="posts-title">Posts</h1>
-  <div id="parent" class="page-wrapper">
+  <div class="page-wrapper">
     <aside id="a"><SearchPost /></aside>
     <section id="b">
       {
@@ -63,15 +63,10 @@ if (category) {
   .page-wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 2rem;
     align-items: start;
     justify-content: center;
-
-    #a {
-      display: flex;
-      justify-content: center;
-    }
-
+    #a,
+    #b,
     #c {
       display: flex;
       justify-content: center;
@@ -79,20 +74,23 @@ if (category) {
   }
 
   @media screen and (max-width: 1060px) {
-    #parent {
+    .page-wrapper {
       display: flex;
       flex-flow: column;
       align-items: center;
       justify-content: center;
     }
-    #a {
+
+    #c {
       order: 1;
     }
+
+    #a {
+      order: 2;
+    }
+
     #b {
       order: 3;
-    }
-    #b {
-      order: 2;
     }
   }
 </style>

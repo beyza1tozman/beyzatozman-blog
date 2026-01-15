@@ -1,0 +1,52 @@
+---
+interface Props {
+  rating: number;
+}
+
+const { rating } = Astro.props;
+---
+
+<span class="rating">
+  {
+    [...Array(5)].map((_, i) => (
+      <span
+        class={`star ${i < Math.floor(rating) ? "filled" : i < rating ? "half" : ""}`}
+      >
+        ★
+      </span>
+    ))
+  }
+</span>
+
+<style>
+  .rating {
+    display: inline-flex;
+    gap: 1px;
+  }
+
+  .star {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #b98d654d;
+  }
+
+  .star.filled {
+    color: #df835f;
+  }
+
+  .star.half {
+    color: #b98d654d;
+  }
+
+  .star.half::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #df835f;
+    display: block;
+  }
+</style>

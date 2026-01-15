@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import StarRating from "../components/StarRating.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -9,7 +10,7 @@ const { frontmatter } = Astro.props;
     <section class="content">
       <h1>
         {frontmatter.title}
-        <span class="author">{frontmatter.author}</span> 📖
+        <span class="author">{frontmatter.author} 📖</span>
       </h1>
       <p>
         {
@@ -20,6 +21,7 @@ const { frontmatter } = Astro.props;
           })
         }
       </p>
+      <StarRating rating={frontmatter.rating} />
       <section class="markdown">
         <slot />
       </section>
@@ -30,14 +32,11 @@ const { frontmatter } = Astro.props;
 <style>
   .page-wrapper {
     max-width: 80ch;
-    margin: 0 auto;
+    margin: 1rem auto;
     background-color: #f8f4ee;
     padding: 2rem;
     border: 4px solid #bad6fd;
     border-radius: 20px;
-  }
-
-  .books {
     color: #000000;
   }
 
@@ -45,5 +44,20 @@ const { frontmatter } = Astro.props;
     font-size: 1.5rem;
     font-weight: normal;
     color: #555555;
+  }
+
+  :global(.markdown em) {
+    color: rgb(151, 62, 62);
+  }
+
+  :global(.markdown a) {
+    color: rgb(62, 98, 151);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .author {
+      display: block;
+    }
   }
 </style>

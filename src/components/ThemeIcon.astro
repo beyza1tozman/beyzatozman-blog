@@ -2,8 +2,13 @@
 
 ---
 
-<button id="themeToggle">
-  <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<button id="themeToggle" class="icon-button">
+  <svg
+    width="30"
+    height="30"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
     <path
       class="sun"
       fill-rule="evenodd"
@@ -18,25 +23,6 @@
 </button>
 
 <style>
-  #themeToggle {
-    border-color: transparent;
-    border-radius: 20px;
-    background: none;
-    display: inline;
-    margin: 5px;
-    cursor: pointer;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    #themeToggle:hover {
-      background-color: #e3bdec;
-    }
-  }
-
-  #themeToggle:active {
-    background-color: #e3bdec;
-  }
-
   .sun {
     fill: black;
   }
@@ -47,6 +33,7 @@
   :global(.dark) .sun {
     fill: transparent;
   }
+
   :global(.dark) .moon {
     fill: white;
   }

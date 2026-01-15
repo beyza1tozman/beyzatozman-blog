@@ -1,9 +1,10 @@
 ---
+import { Icon } from "astro-icon/components";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 ---
 
-<BaseLayout pageTitle={pageTitle} class="about">
+<BaseLayout pageTitle={pageTitle}>
   <div id="gacha-container">
     <img id="gacha-machine-1" src="/assets/gatchapon.png" class="active" />
     <img
@@ -19,28 +20,23 @@ const pageTitle = "About Me";
 
   <div id="fact-popup" class="hidden">
     <div id="fact-content">
-      <button id="close-btn">✗</button>
+      <button id="close-btn"> <Icon name="mdi:close-thick" /></button>
       <div id="fact-text"></div>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .about {
-    margin: 0 auto;
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   #gacha-container {
     position: relative;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 1rem auto;
     width: 100%;
     max-width: 60%;
-    min-width: 400px;
+    min-width: 300px;
     aspect-ratio: 1;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
   }
 
   #gacha-container img {
@@ -117,7 +113,7 @@ const pageTitle = "About Me";
 
   #fact-content {
     position: relative;
-    background-color: #d08ee0;
+    background-color: #fef9ff;
     border: 2px solid #af64c2;
     border-radius: 12px;
     color: #000;
@@ -141,20 +137,14 @@ const pageTitle = "About Me";
     top: 8px;
     right: 12px;
     border: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #3b6d3b;
     background: none;
   }
 
   #close-btn:hover {
-    color: #357959;
-  }
-
-  @media (max-width: 480px) {
-    #fact-content {
-      padding: 20px;
-    }
+    color: #4bcf92;
   }
 </style>
 
