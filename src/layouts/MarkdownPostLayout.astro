@@ -100,11 +100,12 @@ const { frontmatter, headings } = Astro.props;
   }
 
   :global(.markdown img) {
-    width: 80%;
+    max-width: 80%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
     margin: 0 auto;
     display: block;
-    object-fit: cover;
-    object-position: center;
     border-radius: 8px;
   }
 

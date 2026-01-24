@@ -21,10 +21,13 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/svg+xml" href="/lamp_icon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonicalUrl} />
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="01c00dcd-46f9-41a3-84c3-926b1f5e6ce2"></script>
   </head>
 
   <body>
