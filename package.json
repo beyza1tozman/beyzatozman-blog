@@ -20,7 +20,7 @@
     "@iconify-json/solar": "^1.2.4",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
-    "astro": "^5.12.1",
+    "astro": "^5.18.1",
     "astro-icon": "^1.1.5",
     "framer-motion": "^12.23.12",
     "p5": "^2.0.4",

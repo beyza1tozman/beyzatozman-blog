@@ -1,3 +1,6 @@
+@import "@fontsource-variable/quicksand";
+@import "@fontsource/londrina-outline";
+
 html,
 body {
   overflow-x: clip;

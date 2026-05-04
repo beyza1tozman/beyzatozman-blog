@@ -3,8 +3,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PageWrapper from "../components/PageWrapper.jsx";
 import "../styles/global.css";
-import "@fontsource-variable/quicksand";
-import "@fontsource/londrina-outline";
 
 const {
   pageTitle = "Beyza Tozman | Blog",
@@ -24,6 +22,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonicalUrl} />
+    <meta
+      name="google-site-verification"
+      content="UmRuDM5lPxBfCrTaJmYk20ZsYSonJlZ3M-Nhp6XaaO4"
+    />
     <script
       defer
       src="https://cloud.umami.is/script.js"
